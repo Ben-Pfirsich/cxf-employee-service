@@ -1,0 +1,34 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.7'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'no.nils.wsdl2java' version "0.12"
+}
+
+group = 'de.pietsch'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.apache.cxf:cxf-spring-boot-starter-jaxws:3.5.2'
+	implementation 'com.sun.xml.bind:jaxb-impl:3.0.2'
+	wsdl2java('com.sun.xml.bind:jaxb-impl:2.3.3')
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+wsdl2java {
+	wsdlDir = file("C:\\Users\\User\\IdeaProjects\\web-service-test\\src\\main\\resources")
+	wsdlsToGenerate = [["$wsdlDir/EmployeeService.wsdl"]]
+//	locale = Locale.GERMANY
+//	cxfVersion = "2.5.1"
+//	cxfPluginVersion = "2.4.0"
+}
