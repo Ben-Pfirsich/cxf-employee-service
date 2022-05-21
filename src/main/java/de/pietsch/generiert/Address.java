@@ -1,5 +1,5 @@
 
-package employee;
+package de.pietsch.generiert;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;

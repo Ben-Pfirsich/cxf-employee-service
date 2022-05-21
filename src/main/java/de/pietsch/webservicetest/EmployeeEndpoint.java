@@ -1,6 +1,7 @@
 package de.pietsch.webservicetest;
 
-import employee.*;
+import de.pietsch.generiert.*;
+import de.pietsch.generiert.*;
 import org.springframework.stereotype.Service;
 
 import javax.xml.datatype.DatatypeConfigurationException;

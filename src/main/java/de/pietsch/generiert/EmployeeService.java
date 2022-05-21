@@ -1,4 +1,4 @@
-package employee;
+package de.pietsch.generiert;
 
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;

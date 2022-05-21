@@ -1,4 +1,4 @@
-package employee;
+package de.pietsch.generiert;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;

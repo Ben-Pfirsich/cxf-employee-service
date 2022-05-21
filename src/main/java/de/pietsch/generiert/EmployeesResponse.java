@@ -1,5 +1,5 @@
 
-package employee;
+package de.pietsch.generiert;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -30,7 +30,7 @@ import java.util.List;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "employee"
+        "employee"
 })
 @XmlRootElement(name = "EmployeesResponse")
 public class EmployeesResponse {
