@@ -1,6 +1,6 @@
 package de.pietsch.webservicetest;
 
-import de.pietsch.generiert.*;
+import employee.*;
 import org.springframework.stereotype.Service;
 
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -12,11 +12,8 @@ import java.util.GregorianCalendar;
 @Service
 public class EmployeeEndpoint implements EmployeeServicePortType {
 
-
-
     @Override
     public EmployeesResponse getEmployeesByName(EmployeeByNameRequest parameters) {
-
         // Erstelle Mock-Objekt als Response
         EmployeesResponse response = new EmployeesResponse();
         String firstname = parameters.getFirstname();
@@ -41,7 +38,6 @@ public class EmployeeEndpoint implements EmployeeServicePortType {
 
     @Override
     public EmployeeResponse getEmployeeById(EmployeeByIdRequest parameters) {
-
         // Erstelle Mock-Objekt als Response
         EmployeeResponse response = new EmployeeResponse();
         Employee responseEmployee = new Employee();

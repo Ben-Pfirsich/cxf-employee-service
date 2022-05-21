@@ -1,5 +1,5 @@
 
-package de.pietsch.generiert;
+package employee;
 
 import javax.xml.bind.annotation.*;
 

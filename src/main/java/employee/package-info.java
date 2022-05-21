@@ -1,2 +1,2 @@
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://www.jpworks.com/employee", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package de.pietsch.generiert;
+package employee;

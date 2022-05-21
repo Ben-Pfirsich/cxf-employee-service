@@ -1,5 +1,5 @@
 
-package de.pietsch.generiert;
+package employee;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -35,7 +35,7 @@ import java.util.List;
 @XmlType(name = "", propOrder = {
     "address"
 })
-@XmlRootElement(name = "de/pietsch/generiert")
+@XmlRootElement(name = "employee")
 public class Employee {
 
     @XmlElement(required = true)
