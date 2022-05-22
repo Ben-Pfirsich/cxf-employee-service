@@ -2,6 +2,8 @@ package de.pietsch.webservicetest;
 
 import de.pietsch.generiert.*;
 import de.pietsch.generiert.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -12,6 +14,8 @@ import java.util.GregorianCalendar;
 
 @Service
 public class EmployeeEndpoint implements EmployeeServicePortType {
+
+    Logger log = LoggerFactory.getLogger(EmployeeEndpoint.class);
 
     @Override
     public EmployeesResponse getEmployeesByName(EmployeeByNameRequest parameters) {
@@ -34,6 +38,7 @@ public class EmployeeEndpoint implements EmployeeServicePortType {
         responseEmployee.setGender("fool");
         responseEmployee.setId(1);
         response.getEmployee().add(responseEmployee);
+        log.info("Erfolgreicher Aufruf von getEmployeesByName.");
         return response;
     }
 
@@ -56,6 +61,7 @@ public class EmployeeEndpoint implements EmployeeServicePortType {
         responseEmployee.setGender("fool");
         responseEmployee.setId(parameters.getId());
         response.setEmployee(responseEmployee);
+        log.info("Erfolgreicher Aufruf von getEmployeeById.");
         return response;
     }
 }
