@@ -3,6 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'no.nils.wsdl2java' version "0.12"
+	id 'war'
 }
 
 group = 'de.pietsch'
